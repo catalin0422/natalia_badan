@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/natalia_badan/static/css/main.e341fea4.css",
-    "main.js": "/natalia_badan/static/js/main.ab3e318c.js",
+    "main.js": "/natalia_badan/static/js/main.5423bb78.js",
     "static/media/Pictura20.png": "/natalia_badan/static/media/Pictura20.f8de0a3f391e1e2a46d4.png",
     "static/media/Pictura7.webp": "/natalia_badan/static/media/Pictura7.d44350da6c1bf970eba1.webp",
     "static/media/profil.jpg": "/natalia_badan/static/media/profil.1a1c49ac2631538b12d5.jpg",
@@ -11,10 +11,10 @@
     "static/media/Pictura1.webp": "/natalia_badan/static/media/Pictura1.8024ad46b28de686e01c.webp",
     "index.html": "/natalia_badan/index.html",
     "main.e341fea4.css.map": "/natalia_badan/static/css/main.e341fea4.css.map",
-    "main.ab3e318c.js.map": "/natalia_badan/static/js/main.ab3e318c.js.map"
+    "main.5423bb78.js.map": "/natalia_badan/static/js/main.5423bb78.js.map"
   },
   "entrypoints": [
     "static/css/main.e341fea4.css",
-    "static/js/main.ab3e318c.js"
+    "static/js/main.5423bb78.js"
   ]
 }
