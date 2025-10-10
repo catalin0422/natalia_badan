@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://toplunch.md/sitemap.xml
