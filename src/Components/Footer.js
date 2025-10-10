@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../Assets/natalia_favicon.png";
+//import Logo from "../Assets/natalia_favicon.png";
 import { FaInstagram } from "react-icons/fa";
 
 import { BsYoutube } from "react-icons/bs";

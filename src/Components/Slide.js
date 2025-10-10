@@ -9,22 +9,22 @@ const Slide = () => {
   const workInfoData = [
     {
       image: Pictura1,
-      title: "Apus peste câmpie",
+      title: "Casa de la marginea satului",
       text: "200 x 300 cm, ulei și acrilic pe pânză (2024)"
     },
     {
       image: Pictura2,
-      title: "Valea liniștită",
+      title: "Biserica din deal",
       text: "150 x 250 cm, cărbune și acuarelă pe hârtie (2024)"
     },
     {
       image: Pictura3,
-      title: "Luncă cu flori și iarbă",
+      title: "Tăcerea florilor în lumină",
       text: "180 x 320 cm, encaustic și tempera pe pânză (2024)"
     },
     {
       image: Pictura4,
-      title: "Râu cu maluri împădurite",
+      title: "Luntrea viselor pe râu",
       text: "220 x 400 cm, ulei, pastel și in pe pânză (2024)"
     }
   ];
