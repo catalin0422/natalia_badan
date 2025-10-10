@@ -3,7 +3,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Reem Kufi";
+  font-family: "Montserrat";
 }
 img {
   max-width: 100%;
@@ -20,7 +20,6 @@ body {
   padding: 0;
   max-width: 100%;
   overflow-x: hidden;
-  /*background-image: url("Assets/mainBack3.png");*/
   background-color: #ffffff;
 }
 
@@ -36,6 +35,12 @@ nav {
 }
 
 .nav-logo-container {
+  margin: 3rem;
+  text-decoration: none;
+  color: rgb(255, 241, 241);
+  font-size: 1.8rem;
+  font-weight: 200;
+  cursor: pointer; /* Optional: Removes underline */
   max-width: 20%;
 }
 .navbar-links-container a {
@@ -43,7 +48,7 @@ nav {
   text-decoration: none;
   color: rgb(255, 241, 241);
   font-size: 1.1rem;
-  font-weight: 600;
+  font-weight: 200;
   cursor: pointer; /* Optional: Removes underline */
 
 }
@@ -79,14 +84,17 @@ nav {
 .home-container {
   height: 100vh;
 }
+
 .home-banner-container {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   display: flex;
-  align-items: center; /* Center the content vertically */
-  justify-content: center; /* Center the content horizontally */
-  padding-top: 3rem;
-  z-index: 1;
-  padding-bottom: 2em;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  text-align: center;
 }
 
 .hero-section {
@@ -97,6 +105,7 @@ nav {
   height: 100%;
   object-fit: cover;
   z-index: -1;
+  filter: brightness(30%);
 }
 
 .home-text-section {
@@ -113,9 +122,11 @@ nav {
 }
 
 .primary-heading {
-  font-size: clamp(2rem, 5vw, 4rem);
+  font-size: clamp(2rem, 5vw, 3rem);
   color: #ffffff;
   width: 80%;
+  font-weight: 400;
+  
 }
 
 .highlight-pranz{
@@ -134,13 +145,13 @@ nav {
 
 .secondary-button {
   padding: 1rem 2.5rem;
-  margin-top: 2em;
+  margin-top: 4em;
   background-color: rgba(0, 0, 0, 0);
   outline: 1px solid white;
   border: none;
-  font-size: 2rem;
+  font-size: 1.4rem;
   cursor: pointer;
-  font-weight: 600;
+  font-weight: 150;
   color: white;
   transition: 0.2s;
   display: flex;
@@ -155,121 +166,55 @@ nav {
 }
 
 .secondary-button:hover {
-  background-color: rgb(66, 0, 0);
+  filter: brightness(80%);
 }
 
-.work-section-wrapper {
-  width: 100%;
-  padding-top : 1em;
-  margin-top: 5rem;
-  margin-bottom: 8rem;
-  /*background-image: url("Assets/menuBack2.png");*/
-}
-.work-section-top p {
-  text-align: center;
-  max-width: 800px !important;
-}
-.work-section-top h1 {
-  max-width: 900px !important;
-}
-.work-section-top {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.work-section-info {
-  width: 340px;
-  min-height: 550px;
-  background-color: #9f0000;;
-  padding: 1rem 1rem;
-  display: flex;
-  flex-direction: column;
-  border-radius: 1rem;
-  color: #fff9f9;
-  margin: 1rem 1rem;
-}
-.work-section-info h2 {
-  margin: 1rem 0rem;
-  text-align: center; /* Titlul rămâne centrat */
-}
-
-.work-meniu {
-  color: #ffffff;
-  text-align: left; /* Textul se aliniază la stânga */
-  font-size: 1em;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem; 
-  padding: 0rem;
-}
-
-.work-pret{
-  padding-top: 1em;
-  color: #ffffff;
-  font-size: 1.5rem;
-}
-
-.work-section-bottom {
-  margin-top: 5rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.work-section-info p {
-  flex: 1;
-  display: flex;
-  align-items: center;
-  font-weight: 600;
-}
-
-.work-primary-text {
-  font-size: 3rem;
-  font-weight: 700;
-  color: #000000;
-  padding-bottom: 0em;
-  padding-top: 0em;
-
-}
-
-
+/* Despre*/
 
 .about-section-container { 
   position: relative;
   display: flex;
   align-items: center;
-  justify-content: space-between; 
+  justify-content: center; 
   width: 100%;
   height: 100vh;
-  background-color: black;
+  background-color: rgb(255, 255, 255);
+  overflow: hidden;
+  padding: 0 8rem; /* spațiu lateral consistent */
+  box-sizing: border-box;
+}
+
+.about-section-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  max-width: 1400px;
+  width: 100%;
+  gap: 6rem; /* distanță între text și imagine */
 }
 
 .about-section-text-container {
   flex: 1;
-  justify-content: center;
   display: flex;
   flex-direction: column;
-}
-
-.about-section-content{
-  padding-left: 5rem;
-  padding-right: 20rem;
+  justify-content: center;
+  font-weight: 200;
 }
 
 .about-primary-subheading {
-  font-weight: 700;
-  color: #fe9e0d; /* Culoare galbenă */
-  font-size: 2.5rem;   
-  
+  font-family: "Montserrat";
+  font-weight: 300;
+  color: #000000;
+  font-size: 2.5rem;
+  margin-bottom: 1.5rem;
 }
 
-
-.about-primary-text{
-  font-size: 1.5em;
-  line-height: 1.5;
-  color: #fff6f6; 
-  font-family: "Montserrat";
+.about-primary-text {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #000000; 
+  font-family: "Montserrat", sans-serif;
+  max-width: 600px;
 }
 
 .about-secondary-text {
@@ -279,117 +224,108 @@ nav {
   color: #fe9e0d;
 }
 
-.details-list {
-  list-style-type: none; /* Elimină bulinele implicite */
-  padding-left: 0; /* Elimină indentarea implicită */
-}
-
-.details-list li {
-  position: relative;
-  padding-left: 0.6rem; /* Lasă spațiu pentru bulina personalizată */
-  font-size: 1.2em;
-  margin-bottom: 8px;
-  color: #fffafa; 
-  font-family: "Montserrat";
-  line-height: 1.9rem;
-}
-
-.about-bullet-point {
-  position: absolute;
-  padding-left: 1rem;
-  left: 0;
-  top: 0;
-  color:rgb(255, 255, 255); /* Culoarea bulinelor */
-  font-weight: bold;
-  font-size: 0.1em; /* Mărimea bulinelor */
-}
-
-
-.slide-section-wrapper {
-  width: 100%;
-  padding-top : 0em;
-  margin-top: 7rem;
-  margin-bottom: 6rem;
-}
-.slide-section-top p {
-  text-align: center;
-  max-width: 800px !important;
-}
-.slide-section-top h1 {
-  max-width: 900px !important;
-}
-.slide-section-top {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
-}
-.slide-section-info {
-  width: 800px;
-  min-height: 550px;
-  background-color: #ffffff;
-  padding: 1rem 1rem;
-  display: flex;
-  flex-direction: column;
-  border-radius: 1rem;
-  color: #000000;
-  margin: 1rem 1rem;
-  /*border: 3px solid #a40000;*/
-}
-.slide-section-info h2 {
-  margin: 1rem 0rem;
-  text-align: center; 
-  font-family: "Bebas Neue";
-  font-weight: 300;
-}
-
-.slide-introduction-text{
-  padding-top: 2rem;
-  padding: 2rem;
-  font-size: 1.6em;
-  font-weight: 300;
-  font-family: "Roboto";
-}
-
-.slide-meniu {
-  color: #000000;
-  text-align: center; /* Centers the text horizontally */
-  font-size: 1.5em;
-  display: flex;
-  align-items: center;
-  gap: 0.5rem; 
-  padding: 0rem;
-  padding-bottom: 1rem;
-  justify-content: center; /* Centers the content */
-}
-
-.slide-meniu-title{
-  font-size: 2.5em;
-}
-
-.slide-section-bottom {
-  margin-top: 2rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: wrap;
-}
-.slide-section-info p {
+/* 🔹 Imaginea în dreapta */
+.about-image-container {
   flex: 1;
   display: flex;
-  align-items: center;
-  font-weight: 300;
-  font-family: "Roboto";
+  justify-content: flex-end;
 }
 
-.slide-primary-text {
-  font-size: 4.5rem;
-  font-weight: 100;
-  color: rgb(164, 0, 0);
-  padding-bottom: 0em;
-  padding-top: 0em;
-  font-family: "Bebas Neue";
+.about-image {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.5);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
+
+.about-image:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.6);
+}
+
+/*Slide*/
+
+/* ---------------- Slide Section ---------------- */
+
+.slide-wrapper {
+  width: 100%;
+  margin: 7rem auto 6rem auto;
+  padding: 0 0rem;
+  box-sizing: border-box;
+}
+
+/* Full-width top image */
+.top-image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  border-radius: 0;
+  box-shadow: none;
+}
+
+/* Alternating sections */
+.section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+  margin: 4rem 2rem;
+  margin-left: 4rem;
+  flex-wrap: wrap; /* ensures responsive wrapping on small screens */
+}
+
+.section-image {
+  flex: 1;
+  min-width: 300px;
+}
+
+.section-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 0rem;
+  object-fit: cover;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+  transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.section-image img:hover {
+  transform: scale(1.03);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.5);
+}
+
+.section-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.section-text h2 {
+  font-family: "Montserrat";
+  font-style: italic;
+  font-size: 1rem;
+  color: rgb(0, 0, 0);
+  margin-bottom: 1.5rem;
+  text-align: left;
+  font-weight: 300;
+}
+
+.section-text p {
+  font-family: "Montserrat";
+  font-weight: 100;
+  font-size: 0.8rem;
+  line-height: 1.8;
+  color: #5b5b5b;
+  text-align: left;
+}
+
+/* Alternating layout for desktop */
+.section:nth-child(even) {
+  flex-direction: row-reverse;
+}
+
+/*footer*/
 
 .footer-wrapper {
   margin: 0rem 0rem;
@@ -400,8 +336,9 @@ nav {
   min-height: 300px;
 }
 .footer-heading {
-  color:#deaa00;
+  color:#af7171;
   font-size: 1.3rem;
+  padding-bottom: 1wrem;
 }
 .footer-logo-container {
   max-width: 110px;
@@ -445,122 +382,191 @@ nav {
   font-weight: 700;
 }
 
+/* ---------------- Mobile / Tablet Styles ---------------- */
 @media (max-width: 1000px) {
-  html.body{
+  html.body {
     overflow-x: hidden;
   }
 
+  .nav-logo-container{
+    font-size: 2rem;
+    width:100%
+  }
+
+  /* Hero Section */
   .hero-section { 
     object-fit: cover;
     width: 100%;  
   }
 
+  /* Home Banner */
   .home-banner-container {
     padding-top: 0.5rem;
-    
   }
-  
-  .navbar-links-container a {
-    margin-right: 1rem;
-    font-size: 1rem;
-  }
-  .primary-button {
-    font-size: 1rem;
-  }
+
   .home-bannerImage-container {
     max-width: 600px;
   }
-  .work-section-wrapper {
-    padding-top : 0em;
-    margin-top: 2rem;;
-  }
-  .work-section-info {
-    width: 300px;
-    min-height: 450px;
+
+  /* Navbar */
+  .navbar-links-container a {
+    margin-right: 1rem;
+    font-size: 0.8rem;
   }
 
-  .work-primary-text  {
-    font-size: 2rem;
-    text-align: center;
+  .primary-button {
+    font-size: 1rem;
   }
+
 
   .primary-subheading {
     font-weight: 700;
-    font-size: 2.4rem;
-    padding-bottom: 1em;
+    font-size: 2rem;
+    text-align: center; /* from original first CSS */
   }
 
-  .about-section-container {
-    padding: 1rem;
-    height: 800px;
-    padding-bottom: 2rem;
+  /* About Section container */
+ .about-section-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  text-align: center;
+  padding: 0 1rem 2rem 1rem; /* keep bottom padding for spacing */
+  margin: 0 auto;
+  height: auto; /* let section grow naturally */
+}
+
+  /* Flex content wrapper */
+  .about-section-content {
+    display: flex;
+    flex-direction: column;  /* ensures text first, image second */
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 600px;
+    gap: 2rem; /* spacing between text and image */
+    
   }
 
-  .about-section-content{
-    padding-left: 1.1rem;
-    padding-right: 0rem;
+  /* Text container */
+  .about-section-text-container {
+    order: 1; /* text always first */
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
   }
 
+
+  /* Headings & paragraph */
   .about-primary-subheading {
-    font-size: 2.4rem;
+    font-size: 2.4rem; /* larger from first CSS */
+    margin-bottom: 2rem;
   }
-  
+
   .about-primary-text {
-    font-size: 1.2em;
+    font-size: 1em;
     line-height: 1.5;
     margin-bottom: 1rem;
   }
-  
+
   .about-secondary-text {
     font-size: 1.6em;
     line-height: 1.5;
   }
-  
-  .details-list {
-    list-style-type: none; /* Elimină bulinele implicite */
-    padding-left: 0; /* Elimină indentarea implicită */
+
+  /* Image container */
+  .about-image-container {
+    order: 2; /* image comes after text */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    width: 100%;
   }
+
+  /* Image itself */
+  .about-image {
+    display: block;
+    max-width: 90%;
+    height: auto;
+    border-radius: 20px;
+    object-fit: cover;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+  }
+
+  .about-image:hover {
+    transform: scale(1.03);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+  }
+
   
-  .details-list li {
-    position: relative;
-    padding-left: 25px; 
+  /* Slides */
+  .slide-primary-text {
+    font-size: 0.8rem;
+  }
+  .slide-meniu-title {
     font-size: 1em;
-    margin-bottom: 8px;
-     /* Textul detaliilor este alb */
   }
-  
-  .bullet-point {
-    position: absolute;
-    left: 0;
-    top: 0;
-    
-    font-weight: bold;
-    font-size: 1.5em; /* Mărimea bulinelor */
-  }
-  .slide-primary-text{
-    font-size: 2.5rem;
-  }
-  .slide-meniu-title{
-    font-size: 1.6em;
-  }
-  .slide-meniu{
+  .slide-meniu {
     font-size: 1em;
   }
-  .slide-introduction-text{
-    font-size: 1.2em;
+  .slide-introduction-text {
+    font-size: 1em;
     font-weight: 300;
   }
 
+  /* Sections */
+  .section {
+  display: flex;
+  flex-direction: column; /* column for mobile, row for desktop handled in React classes */
+  align-items: center;    /* horizontally center children */
+  justify-content: center; /* vertically center if needed */
+  gap: 2rem;
+  margin: 3rem 2rem;
+}
+
+.section-text {
+  text-align: center; /* centers text inside div */
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centers heading and paragraph horizontally */
+  justify-content: center; /* optional vertical centering inside div */
+}
+
+.section-text h2 {
+  font-size: 1rem;
+}
+
+.section-text p {
+  font-size: 0.8rem;
+}
+
+  .section-image {
+  display: flex;              /* make container a flex box */
+  justify-content: center;    /* horizontally center the image */
+  align-items: center;        /* vertically center if needed */
+}
+
+.section-image img {
+  max-width: 90%;
+  height: auto;
+  display: block;             /* ensures margin auto works */
+}
+
+  /* Footer */
   .footer-section-columns {
     text-align: left;
   }
 }
+
 @media (max-width: 800px) {
   .nav-logo-container {
-    max-width: 140px;
+    width:100%
   }
   .navbar-links-container {
-    max-width: 20px;
+    width:100%;
     display: none;
   }
   .navbar-menu-container {
@@ -578,6 +584,7 @@ nav {
   }
   .about-section-container {
     flex-direction: column;
+    margin-top: 3rem !important;
   }
   .home-image-section,
   .about-section-image-container {
@@ -595,22 +602,16 @@ nav {
   .about-section-text-container {
     justify-content: center;
     align-items: center;
-    margin-top: 4rem;
+    margin-top: 0rem;
   }
   .secondary-button {
     font-size: 1rem;
     padding: 0.8rem 2rem;
     cursor: pointer;
   }
-  .about-section-container {
-    margin-top: 5rem !important;
-  }
   .about-buttons-container {
     justify-content: center;
     flex-direction: column;
-  }
-  .primary-subheading {
-    text-align: center;
   }
   
   .footer-wrapper {
@@ -628,6 +629,7 @@ nav {
     max-width: 100vw;
   }
 }
+
 @media (max-width: 600px) {
   .home-bannerImage-container,
   .about-background-image-container {

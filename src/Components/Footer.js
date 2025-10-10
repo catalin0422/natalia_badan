@@ -1,5 +1,5 @@
 import React from "react";
-import Logo from "../Assets/Logo.webp";
+import Logo from "../Assets/natalia_favicon.png";
 import { FaInstagram } from "react-icons/fa";
 
 import { BsYoutube } from "react-icons/bs";
@@ -9,9 +9,9 @@ const Footer = () => {
   return (
     <div id="contact-section"  className="footer-wrapper">
       <div className="footer-section-one">
-        <div className="footer-logo-container">
+        {/* <div className="footer-logo-container">
           <img src={Logo} alt="" />
-        </div>
+        </div> */}
         <div className="footer-icons">
         <a href="https://www.instagram.com/yourpage" target="_blank" rel="noopener noreferrer">
     <FaInstagram />
@@ -35,9 +35,9 @@ const Footer = () => {
         </div> */}
         <div className="footer-section-columns">
          <span> </span>
-         <span class="footer-heading">Contactează-ne:</span>
-          <span>+373 (68) 631 885</span>
-          <span>toplunch.md@gmail.com</span>
+         <span class="footer-heading">Contactează-mă:</span>
+          <span>+373 (60) 610 888</span>
+          <span>natalia.badan@gmail.com</span>
           <span></span>
           <span></span>
          

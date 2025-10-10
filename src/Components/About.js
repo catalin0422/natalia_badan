@@ -1,38 +1,32 @@
 import React from "react";
-
+import aboutImage from "../Assets/profil.jpg"; // ← pune imaginea ta în folderul /src/assets
 
 const About = () => {
   return (
- 
-    <div id="about-section" className="about-section-container">
-      <div className="about-section-content">
-        <div className="about-description">
-          <h3 className="about-primary-subheading"> DESPRE NOI </h3>
-          <p className="about-primary-text">
-            TopLunch este companie dedicată livrării de prânzuri delicioase și sănătoase
-            pentru birouri și corporații. Oferim prânzuri gătite cu ingrediente
-            proaspete, naturale și de calitate superioară, livrate direct la sediul
-            dumneavoastră în Chișinău.
-          </p>
-        </div>
+    <div className="about-section-container">
+  <div className="about-section-content">
+    
+    <div className="about-section-text-container">
+      <h3 className="about-primary-subheading">Natalia Badan</h3>
+      <p className="about-primary-text">
+        Sunt Natalia Badan, pictoriță contemporană, pasionată de explorarea lumii prin culori, texturi și forme. Pentru mine, pictura este mai mult decât o imagine pe pânză; este o formă de introspecție, un dialog tăcut cu universul, în care fiecare tușă poartă amprenta unei emoții, unei amintiri sau a unei stări interioare.
 
-        <div className="about-details">
-          <p className="about-secondary-text">DETALII:</p>
-          <ul className="details-list">
-            <li>• <span class="bold-text">Meniu diversificat și sănătos </span> – Ingrediente proaspete, fără aditivi chimici.</li>
-            <li>• <span class="bold-text">Livrare rapidă și gratuită </span> – Comenzile făcute până la ora 10:00 ajung în aceeași zi.</li>
-            <li>• <span class="bold-text">Comanda minima zilnica </span>  – 10 portii.</li>
-            <li>• <span class="bold-text">Contract și factură fiscală </span> – Perfect pentru companii și angajați.</li>
-            <li>• <span class="bold-text">Ambalaje ecologice disponibile </span>  – Caserole bio contra cost.</li>
-          </ul>
-          
-        </div>
-      </div>
+În lucrările mele, caut mereu echilibrul dintre culoare și emoție, dintre gestul spontan al pensulei și liniștea contemplativă care se ascunde în detalii. Fiecare tablou reprezintă o încercare de a surprinde un fragment de viață — o rază de lumină care se joacă printre frunze, reflexia unei case rustice într-un pârâu, sau atmosfera unei seri senine în sat. Este modul meu de a comunica ceea ce cuvintele nu pot exprima: acea senzație profundă de liniște, nostalgie sau bucurie subtilă.
 
+Majoritatea lucrărilor mele sunt peisaje și scene rustice, inspirate de natura și tradițiile satului românesc, unde fiecare detaliu — fie o căsuță cu acoperiș de stuf, un drum pietruit, un deal scăldat în lumina apusului — poartă povestea locului și a timpului. În pictura mea, perfecțiunea tehnică nu este scopul, ci sinceritatea momentului, autenticitatea gestului și libertatea culorii de a prinde viață.
+
+Prin arta mea, încerc să creez un spațiu în care privitorul să poată păși și să simtă, chiar și pentru câteva clipe, ritmul tăcut al naturii și farmecul lumii rurale, să se regăsească în lumina, umbrele și texturile pe care le aduc pe pânză. Fiecare lucrare este, în esență, o invitație la contemplare, la redescoperirea frumosului simplu și a echilibrului între liniște și emoție.
+      </p>
     </div>
-  
+
+    {/* Imaginea */}
+    <div className="about-image-container">
+      <img src={aboutImage} alt="Despre TopLunch" className="about-image" />
+    </div>
+  </div>
+</div>
+
   );
 };
 
 export default About;
-

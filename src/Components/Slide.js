@@ -1,58 +1,58 @@
 import React from "react";
-import Vegetable from "../Assets/vegetables.webp";
-import Meat from "../Assets/meat.webp";
-import Fish from "../Assets/fish.webp";
-import Stew from "../Assets/stew.webp";
+import Pictura1 from "../Assets/Pictura4.webp";
+import Pictura2 from "../Assets/Pictura1.webp";
+import Pictura3 from "../Assets/Pictura8.webp";
+import Pictura4 from "../Assets/Pictura7.webp";
+import Pictura5 from "../Assets/Pictura12.webp";
 
 const Slide = () => {
   const workInfoData = [
     {
-      image: Vegetable,
-      title: "Sortare atentă a legumelor",
-      text1: "Fiecare legumă trece printr-un riguros control al calității, fiind verificată pentru nivelul de nitrați și stadiul de coacere. Punem accent pe produse ecologice, fără adaosuri chimice, pentru a oferi ingrediente cât mai naturale și sănătoase."
+      image: Pictura1,
+      title: "Apus peste câmpie",
+      text: "200 x 300 cm, ulei și acrilic pe pânză (2024)"
     },
     {
-      image: Fish,
-      title: "Păstrare la rece conform standardelor",
-      text1: "Fiecare secție respectă cu strictețe temperatura necesară pentru păstrarea produselor, conform normelor stabilite. Temperatura poate varia între 6 și 18 grade, iar angajații beneficiază de uniforme speciale pentru a lucra în condiții optime, fără disconfort.",
+      image: Pictura2,
+      title: "Valea liniștită",
+      text: "150 x 250 cm, cărbune și acuarelă pe hârtie (2024)"
     },
     {
-      image: Meat,
-      title: "Carne proaspătă și de calitate",
-      text1: "Toată carnea este păstrată în condiții ideale de refrigerare, pentru a asigura prospețimea și calitatea până în momentul utilizării. ",
+      image: Pictura3,
+      title: "Luncă cu flori și iarbă",
+      text: "180 x 320 cm, encaustic și tempera pe pânză (2024)"
     },
     {
-      image: Stew,
-      title: "Mâncare gustoasă, pregătită cu pasiune",
-      text1: "Fiecare preparat este gătit cu atenție la detalii, folosind ingrediente proaspete și metode tradiționale de preparare. Ne asigurăm că aromele naturale sunt păstrate, iar combinațiile de gusturi creează o experiență culinară autentică. Fără aditivi sau ingrediente artificiale, fiecare farfurie reflectă pasiunea noastră pentru mâncare sănătoasă și delicioasă.",
-    },
+      image: Pictura4,
+      title: "Râu cu maluri împădurite",
+      text: "220 x 400 cm, ulei, pastel și in pe pânză (2024)"
+    }
   ];
+
   return (
-    <div className="slide-section-wrapper">
-    
-      <div className="slide-section-top">
-        <p className="slide-primary-text">
-        De ce să ne alegi pe noi?
-        </p>
-        <p className="slide-introduction-text">
-        La sosirea produselor în bucătărie, fiecare ingredient este cu atenție direcționat către secția sa specifică: legumele se alătură secției de legume, brânzeturile sunt preluate de secția de lactate, iar crupele sunt puse în zona dedicată băcăniei. Fiecare secție respectă cu rigurozitate temperatura ideală, pentru a păstra prospețimea și calitatea produselor, oferind astfel gustul autentic pe care îl merită fiecare preparat.
-        </p>
+    <div className="slide-wrapper">
+      {/* Full-width top image */}
+      <div className="top-image w-full">
+        <img src={Pictura5} alt="Top Banner" className="w-full h-auto object-cover" />
       </div>
-      <div className="slide-section-bottom">
-        {workInfoData.map((data) => (
-          <div className="slide-section-info" key={data.title}>
-            <div className="info-boxes-img-container">
-              <img src={data.image} alt="" loading="lazy"/>
-            </div>
-            <h2 class="slide-meniu-title">{data.title}</h2>
-            <p class="slide-meniu">{data.text1}</p>
-            <p class="slide-meniu">{data.text2}</p>
-            <p class="slide-meniu">{data.text3}</p>
-            <p class="slide-meniu">{data.text4}</p>
-            <p class="-pret">{data.text5}</p>
+
+      {/* Alternating sections */}
+      {workInfoData.map((item, index) => (
+        <div
+          key={item.title}
+          className={`section flex flex-col md:flex-row items-center my-12 ${
+            index % 2 !== 0 ? "md:flex-row-reverse" : ""
+          }`}
+        >
+          <div className="section-image md:w-1/2 w-full p-4">
+            <img src={item.image} alt={item.title} className="w-full h-auto rounded-lg shadow-lg" />
           </div>
-        ))}
-      </div>
+          <div className="section-text md:w-1/2 w-full p-4">
+            <h2 className="text-2xl font-bold mb-4">{item.title}</h2>
+            <p className="text-gray-700">{item.text}</p>
+          </div>
+        </div>
+      ))}
     </div>
   );
 };
