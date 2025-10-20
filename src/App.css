@@ -325,6 +325,102 @@ nav {
   flex-direction: row-reverse;
 }
 
+/*GALLERY COMPONENT*/
+
+.gallery-wrapper {
+  column-count: 3;
+  column-gap: 3rem; /* larger gap between columns */
+  padding: 3rem;
+  font-family: "Montserrat";
+}
+
+.gallery-item {
+  break-inside: avoid;
+  margin-bottom: 3rem; /* larger vertical spacing */
+  cursor: zoom-in;
+  transition: transform 0.2s ease;
+}
+
+.gallery-item:hover {
+  transform: scale(1.02);
+}
+
+.gallery-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 0; /* no rounded corners */
+}
+
+.gallery-text {
+  font-family: "Montserrat";
+  font-weight: 300;
+  padding-top: 0.5rem;
+}
+
+.gallery-title {
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0;
+}
+
+.gallery-desc {
+  font-weight: 300;
+  font-size: 0.85rem;
+  color: #444;
+  margin: 0.25rem 0 0;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0; /* shorthand for top:0; right:0; bottom:0; left:0 */
+  background: rgba(10, 10, 10, 0.95);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+  z-index: 9999;
+  padding: 1rem; /* space around image for very tall screens */
+}
+
+/* Lightbox inner wrapper to contain image + caption */
+.lightbox-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-height: 100%;
+  max-width: 100%;
+  overflow: auto; /* ensures caption doesn't push image out */
+}
+
+/* Lightbox image */
+.lightbox img {
+  max-width: 95%;
+  max-height: 80vh; /* <=== limits height to 80% of viewport */
+  object-fit: contain;
+  border-radius: 0;
+}
+
+/* Caption under the image */
+.lightbox-caption {
+  text-align: center;
+  color: #eee;
+  margin-top: 1rem;
+  max-width: 90%;
+}
+
+.lightbox-caption .gallery-title {
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.lightbox-caption .gallery-desc {
+  font-size: 0.95rem;
+  font-weight: 300;
+  color: #ddd;
+}
+
 /*footer*/
 
 .footer-wrapper {
@@ -555,6 +651,11 @@ nav {
   display: block;             /* ensures margin auto works */
 }
 
+ .gallery-wrapper {
+    column-count: 2;
+    column-gap: 2rem;
+  }
+
   /* Footer */
   .footer-section-columns {
     text-align: left;
@@ -634,5 +735,11 @@ nav {
   .home-bannerImage-container,
   .about-background-image-container {
     display: none;
+  }
+
+  .gallery-wrapper {
+    column-count: 1;
+    column-gap: 1.5rem;
+    padding: 1.5rem;
   }
 }

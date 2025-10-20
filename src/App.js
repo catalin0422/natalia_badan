@@ -2,6 +2,7 @@ import "./App.css";
 import Home from "./Components/Home";
 import About from "./Components/About";
 import Slide from "./Components/Slide";
+import Gallery from "./Components/Gallery";
 import Footer from "./Components/Footer";
 import React, { useEffect } from "react";
 import ReactGA from "react-ga"; // Import React GA
@@ -16,9 +17,9 @@ function App() {
   return (
     <div className="App">
       <Home />
-
       <About />
       <Slide />
+      <Gallery/>
       <Footer />
     </div>
   );

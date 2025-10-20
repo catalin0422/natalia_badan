@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "./Navbar";
-import Hero from "../Assets/Pictura20.png";
+import Hero from "../Assets/Pictura20.webp";
 import { Link } from "react-scroll";
 
 
